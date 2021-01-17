@@ -9,7 +9,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array[array.length-1];
+  return array[array.length - 1];
 }
 
 function obtenerLargoDelArray(array) {
@@ -24,7 +24,7 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:
   for (let i = 0; i < array.length; i++) {
-    array[i] = array[i]+1;
+    array[i] = array[i] + 1;
   }
   return array
 }
@@ -52,28 +52,28 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  let frase="";
+  let frase = "";
   for (let i = 0; i < palabras.length; i++) {
     frase += palabras[i];
-   if(i !== palabras.length -1){
-    frase+=" ";
-   } 
+    if (i !== palabras.length - 1) {
+      frase += " ";
+    }
   }
-  return frase; 
+  return frase;
 }
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-   return array.includes(elemento);
+  return array.includes(elemento);
 }
 
 function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  let suma=0;
+  let suma = 0;
   for (let i = 0; i < numeros.length; i++) {
     suma += numeros[i];
   }
@@ -84,7 +84,7 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
- return agregarNumeros(resultadosTest)/resultadosTest.length;
+  return agregarNumeros(resultadosTest) / resultadosTest.length;
 }
 
 function numeroMasGrande(numeros) {
@@ -96,14 +96,19 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0
-  // Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0
+  // Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
-  let total=1;
-for (let i = 0; i < arguments.length; i++) {
- total = arguments[i] * total;
-}
-return total;
+
+  let total = 1;
+  if (typeof arguments[0] === "undefined") {
+    return 0;
+  } else {
+    for (let i = 0; i < arguments.length; i++) {
+      total = arguments[i] * total;
+    }
+    return total;
+  }
 }
 
 // No modificar nada debajo de esta línea
